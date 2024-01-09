@@ -24,5 +24,9 @@ The number of times an entity is referenced across different text sources (messa
 ---
 **What attributes across home types are important to guests?**
 <br>
+To determine what attributes are desirable for each kind of home (lodge, urban condo, hotel room etc.), a unique ranking of attriutes is created using a model. Based on home's properties like location, type, area, capacity, luxury level, the model predicts how many times an attribute will be mentioned in segments of text (messages, reviews and customer service tickets). Ordering these frequencies of mentions in decreasing order helps create a ranked list of importance scores for all attributes of a home. 
 
+For example, an urban apartment has high importance scores given to mentions of restaurant, parking, city view, kitchen and balcony. 
+
+One may argue that aggregating these attribute mentions across home types could have easily given a ranked list of attributes. However, this would not take into account the transient nature of comments by guests, and the ever-increasing corpus of data. As such an inference model was developed that uses the raw frequency data to infer the expected frequency for a segment. 
 
