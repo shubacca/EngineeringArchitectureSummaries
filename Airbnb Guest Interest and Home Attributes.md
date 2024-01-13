@@ -30,3 +30,5 @@ For example, an urban apartment has high importance scores given to mentions of 
 
 One may argue that aggregating these attribute mentions across home types could have easily given a ranked list of attributes. However, this would not take into account the transient nature of comments by guests, and the ever-increasing corpus of data. As such an inference model was developed that uses the raw frequency data to infer the expected frequency for a segment. 
 
+With this knowledge, Airbnb can recommend Hosts about the most mentioned attributes, such as amenities that are most often requested. Hosts can also get an idea on what attributes to highlight and mention in their Home listing page.  
+
