@@ -32,3 +32,5 @@ One may argue that aggregating these attribute mentions across home types could 
 
 With this knowledge, Airbnb can recommend Hosts about the most mentioned attributes, such as amenities that are most often requested. Hosts can also get an idea on what attributes to highlight and mention in their Home listing page.  
 
+The last piece of the puzzle is figuring out what attributes are already present in the Home, without asking the Host about them. Guest feedback for amenities that have been used by Guests, can provide a listing of the important amenities present. Trusted third-party 
+
