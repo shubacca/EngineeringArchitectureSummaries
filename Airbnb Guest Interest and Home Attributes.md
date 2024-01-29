@@ -1,4 +1,4 @@
-## Organizing Home Attributes for Hosts based on Guest Feedback
+# Organizing Home Attributes for Hosts based on Guest Feedback
 
 The variety of property attributes given in a listing don't always provide information on what guests value in those properties. Their opinions are reflected in their messages to the Hosts, the reviews of the property and customer support tickets and listing descriptions. 
 
