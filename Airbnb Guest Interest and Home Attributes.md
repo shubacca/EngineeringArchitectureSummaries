@@ -1,5 +1,3 @@
-All information in this blog summary is obtained from the [Airbnb Engineering Blog](https://medium.com/airbnb-engineering/prioritizing-home-attributes-based-on-guest-interest-3c49b827e51a)
-
 The variety of property attributes given in a listing don't always provide information on what guests value in those properties. Their opinions are reflected in their messages to the Hosts, the reviews of the property and customer support tickets and listing descriptions. 
 
 **Problem Statement:** Can Airbnb recommend better attributes to Hosts to include in their listings based on Guests' reviews and messages, such that the properties generate more engagement? 
@@ -32,5 +30,14 @@ One may argue that aggregating these attribute mentions across home types could 
 
 With this knowledge, Airbnb can recommend Hosts about the most mentioned attributes, such as amenities that are most often requested. Hosts can also get an idea on what attributes to highlight and mention in their Home listing page.  
 
-The last piece of the puzzle is figuring out what attributes are already present in the Home, without asking the Host about them. Guest feedback for amenities that have been used by Guests, can provide a listing of the important amenities present. Trusted third-party 
+The last piece of the puzzle is figuring out what attributes are already present in the Home, without asking the Host about them. Guest feedback for amenities that have been used by Guests, can provide a listing of the important amenities present. Trusted third-party geolocation and real estate databases are also used to furnish other home attributes such as square footage, bedroom count or if the Home is next to a lake. Several models are used like a Bayesian inference model that increases in confidence every time a Guest confirms the existence of an attribute, and an inhouse-developed [WiDeText supervised ML model](https://medium.com/airbnb-engineering/widetext-a-multimodal-deep-learning-framework-31ce2565880c) that predicts the likelihood that the next guest will confirm an attribute's existence given the features associated with that Home. 
 
+The combination of these models that <br>
+a) predict the importance of attributes in Home listings, and <br>
+b) the likelihood that that attribute already exists,
+helps prepare personalized recommendations for Hosts on what to acquire, merchandize and clarify when promoting their Homes on Airbnb. 
+
+---
+
+
+All information in this blog summary is obtained from the [Airbnb Engineering Blog](https://medium.com/airbnb-engineering/prioritizing-home-attributes-based-on-guest-interest-3c49b827e51a)
