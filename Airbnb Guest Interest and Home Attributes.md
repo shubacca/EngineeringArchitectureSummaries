@@ -1,6 +1,6 @@
 The variety of property attributes given in a listing don't always provide information on what guests value in those properties. Their opinions are reflected in their messages to the Hosts, the reviews of the property and customer support tickets and listing descriptions. 
 
-![Inside of an Airbnb Home - Attributes](Images\airbnb-inside.jpg)
+![Inside of an Airbnb Home - Attributes](Images/airbnb-inside.jpg)
 
 **Problem Statement:** Can Airbnb recommend better attributes to Hosts to include in their listings based on Guests' reviews and messages, such that the properties generate more engagement? 
 
@@ -19,7 +19,7 @@ It consists of two steps:
 1. A named entity recognition (NER) model that identifies important phrases: Airbnb uses [textCNN](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://arxiv.org/pdf/1408.5882.pdf) to identify text phrases that could fall under 5 categories (amenity, activity, event, specific POI or generic POI). 
 2. The second step consists of an entity-mapping module, that maps the important phrases with home attributes in a vector embedding space using cosine similarity. The closest mapped attribute is then used for a confidence score computation. 
 
-![LATEX NER on listing descriptions with keywords highlighted - an example](Images\ner-airbnb-text.jpg)
+![LATEX NER on listing descriptions with keywords highlighted - an example](Images/ner-airbnb-text.jpg)
 
 The number of times an entity is referenced across different text sources (messages, reviews, customer service tickets, feedback) is then calculated, normalized and aggregated. Home attributes with high frequency scores or more mentions are considered more important. 
 
