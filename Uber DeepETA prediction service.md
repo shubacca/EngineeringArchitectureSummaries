@@ -15,5 +15,8 @@ The most common method of ETA estimation is with a routing engine, called a rout
 
 The Uber AI approach to ETA prediction uses ML to predict the residual between routing enginer ETA and real-world observed outcomes. 
 
+Based on post-processing machine learning, the model at Uber predicts ETA residuals by considering spatial and temporal features, including origin, destination, request time, real-time traffic, and request nature. Its core objective is to maintain speed to minimize latency in ETA requests while continually improving accuracy measured by MAE across data segments.
+
+
 ---
 All information in this blog summary is obtained from the [Uber Engineering Blog](https://www.uber.com/blog/deepeta-how-uber-predicts-arrival-times/?uclick_id=ddaf1042-c35c-460a-9caa-49dd89f2f23f)
