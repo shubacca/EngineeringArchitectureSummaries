@@ -13,10 +13,17 @@ To deliver on these challenges, Uber AI partnered with Uber's Maps team and deve
 
 The most common method of ETA estimation is with a routing engine, called a route planner. Route planners divide the road networks up into individual road segments, and use shortest-path algorithms to calculate shortest paths between origin and destination. Weighted edges on a graph represent these road segments, and summing these weights over the shortest path gives the ETAs. Traffic patterns, accidents and weather are all considered in modern routing engines. 
 
-The Uber AI approach to ETA prediction uses ML to predict the residual between routing enginer ETA and real-world observed outcomes. 
+The Uber AI approach to ETA prediction uses ML to predict the residuals between routing engine ETA and real-world observed outcomes. 
 
 Based on post-processing machine learning, the model at Uber predicts ETA residuals by considering spatial and temporal features, including origin, destination, request time, real-time traffic, and request nature. Its core objective is to maintain speed to minimize latency in ETA requests while continually improving accuracy measured by MAE across data segments.
 
+Out of the seven different neural network architectures that were tested, Uber found that a shallow encoder-decoder architecture with a linear self-attention yielded the most accurate results. 
+
+![Overview of DeeprETA Post-Processing Architecture from Uber's Blog](Images/uber-deepreta-encoder-decoder-arch.jpg)
+
+
+
+![DeeprETA Post-Processing Architecture from Uber's DeeprETA paper](Images/uber-deeprETA-arch.jpg)
 
 ---
 All information in this blog summary is obtained from the [Uber Engineering Blog](https://www.uber.com/blog/deepeta-how-uber-predicts-arrival-times/?uclick_id=ddaf1042-c35c-460a-9caa-49dd89f2f23f)
