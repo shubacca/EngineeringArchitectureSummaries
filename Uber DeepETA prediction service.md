@@ -25,6 +25,10 @@ Self-attention has been used originally in the context of image processing or na
 
 ## Feature Encoding
 
+Continuous features were bucketed in a quantile bucketing strategy, rather than equal bucket sizes, to improve accuracy. Categorical features were embedded using an embedding look-up operation. 
+
+Geospatial features such as origin and destination latitudes and longitudes, were transformed using geohashing and multiple feature hashing techniques. 
+
 ![DeeprETA Post-Processing Architecture from Uber's DeeprETA paper](Images/uber-deeprETA-arch.jpg)
 
 ---
