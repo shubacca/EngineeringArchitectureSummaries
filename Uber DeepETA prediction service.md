@@ -27,7 +27,11 @@ Self-attention has been used originally in the context of image processing or na
 
 Continuous features were bucketed in a quantile bucketing strategy, rather than equal bucket sizes, to improve accuracy. Categorical features were embedded using an embedding look-up operation. 
 
-Geospatial features such as origin and destination latitudes and longitudes, were transformed using geohashing and multiple feature hashing techniques. 
+Geospatial features such as origin and destination latitudes and longitudes, were transformed using geohashing and multiple feature hashing techniques. Geohashing refers to mapping each grid cell in a latitude/longitude grid, into a compact range of bins using a hashing function. Multiple feature hashing then is used to map multiple compact ranges of bins for each grid cell, using independent hashing functions. 
+
+![Geohashing using Multiple Feature Hashing from Uber's Blog](Images/uber-deerprETA-multiple-geohash.jpg)
+
+## Two-Layer Module
 
 ![DeeprETA Post-Processing Architecture from Uber's DeeprETA paper](Images/uber-deeprETA-arch.jpg)
 
