@@ -21,7 +21,9 @@ Out of the seven different neural network architectures that were tested, Uber f
 
 ![Overview of DeeprETA Post-Processing Architecture from Uber's Blog](Images/uber-deepreta-encoder-decoder-arch.jpg)
 
+Self-attention has been used originally in the context of image processing or natural language processing. For tabular data problems like ETA predictions, the problem statement was defined thus: each feature, such as trip start time of day, origin of trip, is a vector. Self-attention calculates the interaction effects of these K features, stores an intermediate K*K matrix, and outputs the representation of this feature as a weighted sum of all features. In contrast to NLP problems, there is no positional encoding. Multiple attention heads focus one shorter form of each feature's representation across all other features. Thus, the feature <i>speed</i> can be more closely associated with the feature <i>traffic</i> in one head, and with the feature <i>city</i> in another head. 
 
+## Feature Encoding
 
 ![DeeprETA Post-Processing Architecture from Uber's DeeprETA paper](Images/uber-deeprETA-arch.jpg)
 
