@@ -37,7 +37,7 @@ To keep the model fast and lightweight, a shallow two layer model was chosen. Th
 
 The request types feature was initially proposed as a feature in the interaction layer. However, due to mean-shift differences across request types, this feature was included as a new layer. 
 
-
+## Model Training and Inferencing
 
 ![DeeprETA Post-Processing Architecture from Uber's DeeprETA paper](Images/uber-deeprETA-arch.jpg)
 
