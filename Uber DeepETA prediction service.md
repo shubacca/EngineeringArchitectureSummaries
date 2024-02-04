@@ -33,6 +33,12 @@ Geospatial features such as origin and destination latitudes and longitudes, wer
 
 ## Two-Layer Module
 
+To keep the model fast and lightweight, a shallow two layer model was chosen. The first layer is a linear transformer, which aims to learn the interactions between geospatial and temporal features, and the second layer is a fully connected layer with calibration, which aims to adjust bias from various request types like delivery/rides or pickup/dropoff.
+
+The request types feature was initially proposed as a feature in the interaction layer. However, due to mean-shift differences across request types, this feature was included as a new layer. 
+
+
+
 ![DeeprETA Post-Processing Architecture from Uber's DeeprETA paper](Images/uber-deeprETA-arch.jpg)
 
 ---
