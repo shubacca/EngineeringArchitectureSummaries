@@ -37,9 +37,11 @@ To keep the model fast and lightweight, a shallow two layer model was chosen. Th
 
 The request types feature was initially proposed as a feature in the interaction layer. However, due to mean-shift differences across request types, this feature was included as a new layer. 
 
+![DeeprETA Post-Processing Architecture from Uber's DeeprETA paper](Images/uber-deeprETA-arch.jpg)
+
 ## Model Training and Inferencing
 
-![DeeprETA Post-Processing Architecture from Uber's DeeprETA paper](Images/uber-deeprETA-arch.jpg)
+Various metrics are used for evaluation 
 
 ---
 All information in this blog summary is obtained from the [Uber Engineering Blog](https://www.uber.com/blog/deepeta-how-uber-predicts-arrival-times/?uclick_id=ddaf1042-c35c-460a-9caa-49dd89f2f23f)
