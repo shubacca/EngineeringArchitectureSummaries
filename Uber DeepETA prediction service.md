@@ -41,7 +41,9 @@ The request types feature was initially proposed as a feature in the interaction
 
 ## Model Training and Inferencing
 
-Various metrics are used for evaluation 
+Various metrics are used for evaluation according to the task. For fare calculations, mean ETA error is important; whereas for evaluating delivery ETA requests, mean ETA error and the 95th quantile are important metrics. Therefore, to meet these diverse requests, a customized metric was determined called asymmetric Huber loss. Asymmetric loss functions apply different weights to underpredictions and overpredictions, when being a minute early may be more expensive than being late. The asymmetric Huber loss contains two parameters, delta and omega, that control the degree of robustness to outliers and the degree of asymmetry respectively. 
+
+Uber uses the Canvas framework to train, retrain and deploy models on to [Michaelangelo, Uber's ML platform](https://www.uber.com/blog/michelangelo-machine-learning-platform/?uclick_id=ddaf1042-c35c-460a-9caa-49dd89f2f23f). 
 
 ---
 All information in this blog summary is obtained from the [Uber Engineering Blog](https://www.uber.com/blog/deepeta-how-uber-predicts-arrival-times/?uclick_id=ddaf1042-c35c-460a-9caa-49dd89f2f23f)
