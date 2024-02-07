@@ -43,7 +43,13 @@ The request types feature was initially proposed as a feature in the interaction
 
 Various metrics are used for evaluation according to the task. For fare calculations, mean ETA error is important; whereas for evaluating delivery ETA requests, mean ETA error and the 95th quantile are important metrics. Therefore, to meet these diverse requests, a customized metric was determined called asymmetric Huber loss. Asymmetric loss functions apply different weights to underpredictions and overpredictions, when being a minute early may be more expensive than being late. The asymmetric Huber loss contains two parameters, delta and omega, that control the degree of robustness to outliers and the degree of asymmetry respectively. 
 
-Uber uses the Canvas framework to train, retrain and deploy models on to [Michaelangelo, Uber's ML platform](https://www.uber.com/blog/michelangelo-machine-learning-platform/?uclick_id=ddaf1042-c35c-460a-9caa-49dd89f2f23f). 
+Uber uses the Canvas framework to train, retrain and deploy models on to [Michaelangelo, Uber's ML platform](https://www.uber.com/blog/michelangelo-machine-learning-platform/?uclick_id=ddaf1042-c35c-460a-9caa-49dd89f2f23f). This is depicted in the figure below.
+
+![Uber's Training and Deployment Pipeline](Images/uber-deeprETA-training-pipeline.jpg)
+
+Real-time prediction is performed using the frontend-lookup service for all routing queries called the uRoute service. It first makes requests to the routing engine, to obtain route lines and ETAs. This ETA and other model features are then used to make requests to the Michaelangelo Online prediction service. This service runs inference using the trained DeeprETA model and gets predictions in response.  
+
+![Online serving diagram from Uber's blog](Images/uber-deerprETA-online-serving.jpg)
 
 ---
 All information in this blog summary is obtained from the [Uber Engineering Blog](https://www.uber.com/blog/deepeta-how-uber-predicts-arrival-times/?uclick_id=ddaf1042-c35c-460a-9caa-49dd89f2f23f)
